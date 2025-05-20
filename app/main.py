@@ -9,7 +9,7 @@ def read_root():
 
 @app.get("/status")
 async def read_status():
-    return {"status": 200,"message": "OK"}
+    return {"status_code": 200,"message": "OK"}
 
 # @app.get("/items/{item_id}")
 # def read_item(item_id: int, q: Union[str, None] = None):
