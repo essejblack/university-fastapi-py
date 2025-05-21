@@ -3,6 +3,7 @@ from app.routes import student
 import alembic
 
 app = FastAPI(title="University")
+app.include_router(student.router)
 
 @app.get("/")
 def read_root():
