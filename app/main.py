@@ -1,7 +1,8 @@
 from fastapi import FastAPI
+from app.routes import student
+import alembic
 
 app = FastAPI(title="University")
-
 
 @app.get("/")
 def read_root():
@@ -10,7 +11,3 @@ def read_root():
 @app.get("/status")
 async def read_status():
     return {"status_code": 200,"message": "OK"}
-
-# @app.get("/items/{item_id}")
-# def read_item(item_id: int, q: Union[str, None] = None):
-#    return {"item_id": item_id, "q": q}
